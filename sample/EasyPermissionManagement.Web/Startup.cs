@@ -1,3 +1,5 @@
+using EasyPermissionManagement.Core.Abstractions;
+using EasyPermissionManagement.Core.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +19,7 @@ namespace EasyPermissionManagement.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddEasyPermission();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,6 +29,8 @@ namespace EasyPermissionManagement.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ApplyEasyPermission();
 
             app.UseRouting();
 
