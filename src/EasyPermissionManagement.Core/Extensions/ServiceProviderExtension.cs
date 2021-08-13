@@ -41,7 +41,9 @@ namespace EasyPermissionManagement.Core.Extensions
                 .FirstOrDefault();
 
             if (service is null)
+            {
                 throw new NotImplementedException("Service not implemented exception. Service : " + provider);
+            }
 
             var ctors = service.GetConstructors().FirstOrDefault();
             var parameters = ctors.GetParameters();
