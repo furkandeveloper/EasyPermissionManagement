@@ -9,4 +9,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EasyPermissionManagement.Core\EasyPermissionManagement.Core.csproj" />
+  </ItemGroup>
+
 </Project>
