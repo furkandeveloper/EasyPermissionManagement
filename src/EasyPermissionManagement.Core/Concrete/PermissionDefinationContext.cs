@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace EasyPermissionManagement.Core.Concrete
 {
+    /// <summary>
+    /// Permission Defination Context
+    /// </summary>
     public class PermissionDefinationContext : IPermissionDefinationContext
     {
         public void DefinePermission(string key, string provider)
