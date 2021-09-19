@@ -29,6 +29,7 @@ namespace EasyPermissionManagement.Core.Extensions
             if (PermissionValues.Permissions.Count > 0)
             {
                 // Insert or Update permissions
+                var context = app.ApplicationServices.GetRequiredService<IEasyPermissionContext>();
             }
         }
     }
