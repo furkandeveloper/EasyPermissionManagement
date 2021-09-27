@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EasyPermissionManagement.PostgreSql.Migrations
 {
     [DbContext(typeof(EasyPermissionPostgreSqlDbContext))]
-    [Migration("20210824212925_Initial")]
+    [Migration("20210919212055_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,7 @@ namespace EasyPermissionManagement.PostgreSql.Migrations
 
                     b.HasIndex("CreateDate", "UpdateDate", "Key", "Provider");
 
-                    b.ToTable("Permissions");
+                    b.ToTable("Permissions", "easy-permissions");
                 });
 #pragma warning restore 612, 618
         }

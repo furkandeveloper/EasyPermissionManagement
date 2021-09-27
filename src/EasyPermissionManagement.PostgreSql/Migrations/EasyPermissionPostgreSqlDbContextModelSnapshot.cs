@@ -45,7 +45,7 @@ namespace EasyPermissionManagement.PostgreSql.Migrations
 
                     b.HasIndex("CreateDate", "UpdateDate", "Key", "Provider");
 
-                    b.ToTable("Permissions");
+                    b.ToTable("Permissions", "easy-permissions");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,8 +7,12 @@ namespace EasyPermissionManagement.PostgreSql.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "easy-permissions");
+
             migrationBuilder.CreateTable(
                 name: "Permissions",
+                schema: "easy-permissions",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -24,6 +28,7 @@ namespace EasyPermissionManagement.PostgreSql.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Permissions_CreateDate_UpdateDate_Key_Provider",
+                schema: "easy-permissions",
                 table: "Permissions",
                 columns: new[] { "CreateDate", "UpdateDate", "Key", "Provider" });
         }
@@ -31,7 +36,8 @@ namespace EasyPermissionManagement.PostgreSql.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Permissions");
+                name: "Permissions",
+                schema: "easy-permissions");
         }
     }
 }
