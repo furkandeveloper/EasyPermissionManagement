@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\EasyPermissionManagement.Core\EasyPermissionManagement.Core.csproj" />
+    <ProjectReference Include="..\..\src\EasyPermissionManagement.PostgreSql\EasyPermissionManagement.PostgreSql.csproj" />
   </ItemGroup>
 
 </Project>
