@@ -10,7 +10,7 @@ namespace EasyPermissionManagement.Web.Identifiers
     [RegisterIdentifier(PROVIDER)]
     public class UserIdentifier : IIdentifier
     {
-        public const string PROVIDER = "user";
+        public const string PROVIDER = "User";
         public Task<string> GetAsync(string provider)
         {
             return Task.FromResult("4");
