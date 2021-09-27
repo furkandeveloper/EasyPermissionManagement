@@ -13,9 +13,9 @@ namespace EasyPermissionManagement.Core.Concrete
     /// </summary>
     public class PermissionDefinationContext : IPermissionDefinationContext
     {
-        public void DefinePermission(string key, string provider)
+        public void DefinePermission(string key, string provider, bool isDefault)
         {
-            var permission = new PermissionValue(key, provider);
+            var permission = new PermissionValue(key, provider, isDefault);
 
             PermissionValues.Permissions.Add(permission);
         }
