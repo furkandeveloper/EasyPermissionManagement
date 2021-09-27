@@ -1,8 +1,10 @@
 using EasyPermissionManagement.Core.Abstractions;
 using EasyPermissionManagement.Core.Extensions;
+using EasyPermissionManagement.PostgreSql.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -20,6 +22,7 @@ namespace EasyPermissionManagement.Web
         {
             services.AddControllers();
             services.AddEasyPermission();
+            services.UseEasyPermissionNpgsql(options => options.UseNpgsql("User ID=rawduict;Password=oWV6ex14DENnu582ImuFKiv_8vqHdnMW;Host=lallah.db.elephantsql.com;Port=5432;Database=rawduict;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,6 +32,8 @@ namespace EasyPermissionManagement.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseEasyPermission();
 
             app.ApplyEasyPermission();
 
