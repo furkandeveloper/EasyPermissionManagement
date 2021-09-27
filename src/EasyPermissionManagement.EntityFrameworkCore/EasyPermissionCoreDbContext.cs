@@ -35,6 +35,9 @@ namespace EasyPermissionManagement.EntityFrameworkCore
             modelBuilder.Entity<Permission>(entity =>
             {
                 entity
+                    .ToTable(nameof(Permissions), "easy-permissions");
+
+                entity
                     .HasKey(pk => pk.Id);
 
                 entity
@@ -90,6 +93,28 @@ namespace EasyPermissionManagement.EntityFrameworkCore
         {
             Set<T>().Remove(entity);
             await SaveChangesAsync();
+        }
+
+        public virtual T Insert<T>(T entity) where T : class
+        {
+            var entry = Entry(entity);
+            entry.State = EntityState.Added;
+            SaveChanges();
+            return entry.Entity;
+        }
+
+        public virtual T Replace<T>(T entity) where T : class
+        {
+            var entry = Entry(entity);
+            entry.State = EntityState.Modified;
+            SaveChanges();
+            return entry.Entity;
+        }
+
+        public virtual void Delete<T>(T entity) where T : class
+        {
+            Set<T>().Remove(entity);
+            SaveChangesAsync();
         }
     }
 }
