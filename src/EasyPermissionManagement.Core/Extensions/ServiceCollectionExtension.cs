@@ -15,6 +15,7 @@ namespace EasyPermissionManagement.Core.Extensions
         {
             services.AddTransient<IPermissionDefinationContext, PermissionDefinationContext>();
             services.AddTransient<IPermissionProvider, PermissionProviderManager>();
+            services.AddTransient<IPermissionChecker, PermissionCheckerManager>();
             return services;
         }
     }
