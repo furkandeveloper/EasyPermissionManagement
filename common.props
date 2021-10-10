@@ -15,5 +15,6 @@
 			⛏ Implement PostgreSql module
 			⛏ Implement Core module
 		</PackageReleaseNotes>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 </Project>
