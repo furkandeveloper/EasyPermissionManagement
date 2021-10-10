@@ -15,7 +15,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyPermissionManagement.En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyPermissionManagement.PostgreSql", "src\EasyPermissionManagement.PostgreSql\EasyPermissionManagement.PostgreSql.csproj", "{4DF4757E-F6E8-4DBE-853B-2DAD3CA96395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyPermissionManagement.AspNetCore", "src\EasyPermissionManagement.AspNetCore\EasyPermissionManagement.AspNetCore.csproj", "{4BE3AE6B-8935-41CB-B18E-3E598A5353EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyPermissionManagement.AspNetCore", "src\EasyPermissionManagement.AspNetCore\EasyPermissionManagement.AspNetCore.csproj", "{4BE3AE6B-8935-41CB-B18E-3E598A5353EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CBB2864A-7715-4443-9F83-B21F8F21EEA5}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

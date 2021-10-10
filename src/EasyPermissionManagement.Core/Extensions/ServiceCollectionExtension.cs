@@ -14,6 +14,7 @@ namespace EasyPermissionManagement.Core.Extensions
         public static IServiceCollection AddEasyPermission(this IServiceCollection services)
         {
             services.AddTransient<IPermissionDefinationContext, PermissionDefinationContext>();
+            services.AddTransient<IPermissionProvider, PermissionProviderManager>();
             return services;
         }
     }

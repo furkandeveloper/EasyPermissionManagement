@@ -22,5 +22,10 @@ namespace EasyPermissionManagement.Core.Entities
         /// Provider of Permission
         /// </summary>
         public string Provider { get; set; }
+
+        /// <summary>
+        /// Relation property
+        /// </summary>
+        public virtual ICollection<IdentifierPermission> IdentifierPermissions { get; set; }
     }
 }

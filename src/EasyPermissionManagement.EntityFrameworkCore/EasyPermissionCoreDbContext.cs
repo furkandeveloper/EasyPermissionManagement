@@ -2,6 +2,7 @@
 using EasyPermissionManagement.Core.Entities;
 using EasyPermissionManagement.EntityFrameworkCore.Generators;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace EasyPermissionManagement.EntityFrameworkCore
 
         #region Tables
         public virtual DbSet<Permission> Permissions { get; set; }
+
+        public virtual DbSet<IdentifierPermission> IdentifierPermissions { get; set; }
         #endregion
 
 
@@ -65,6 +68,47 @@ namespace EasyPermissionManagement.EntityFrameworkCore
                     .Property(p => p.Id)
                     .HasValueGenerator<GuidValueGenerator>()
                     .ValueGeneratedOnAdd();
+
+                entity
+                    .HasMany(m => m.IdentifierPermissions)
+                    .WithOne(o => o.Permission)
+                    .HasForeignKey(fk => fk.PermissionId);
+            });
+
+            modelBuilder.Entity<IdentifierPermission>(entity =>
+            {
+                entity
+                    .ToTable(nameof(IdentifierPermissions), "easy-permissions");
+
+                entity
+                    .HasKey(pk=>pk.Id);
+
+                entity
+                    .HasIndex(ix=> new { ix.CreateDate, ix.UpdateDate, ix.IdentifierKey});
+
+                entity
+                    .Property(p=>p.IdentifierKey)
+                    .IsRequired();
+
+                entity
+                    .Property(p => p.CreateDate)
+                    .HasValueGenerator<DateTimeValueGenerator>()
+                    .ValueGeneratedOnAdd();
+
+                entity
+                    .Property(p => p.UpdateDate)
+                    .HasValueGenerator<DateTimeValueGenerator>()
+                    .ValueGeneratedOnAdd();
+
+                entity
+                    .Property(p => p.Id)
+                    .HasValueGenerator<GuidValueGenerator>()
+                    .ValueGeneratedOnAdd();
+
+                entity
+                    .HasOne(o => o.Permission)
+                    .WithMany(m => m.IdentifierPermissions)
+                    .HasForeignKey(fk => fk.PermissionId);
             });
         }
 
