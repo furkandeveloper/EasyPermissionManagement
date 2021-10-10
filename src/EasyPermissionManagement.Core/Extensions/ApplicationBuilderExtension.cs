@@ -1,13 +1,10 @@
 ﻿using EasyPermissionManagement.Core.Abstractions;
-using Microsoft.AspNetCore.Builder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using EasyPermissionManagement.Core.Statics;
 using EasyPermissionManagement.Core.Entities;
+using EasyPermissionManagement.Core.Statics;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
 
 namespace EasyPermissionManagement.Core.Extensions
 {
