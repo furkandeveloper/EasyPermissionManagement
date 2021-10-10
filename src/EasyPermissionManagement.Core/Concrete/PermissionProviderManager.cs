@@ -31,5 +31,20 @@ namespace EasyPermissionManagement.Core.Concrete
                 IdentifierKey = identifierKey
             });
         }
+
+        public async Task RemovePermissionAsync(string key, string identifierKey)
+        {
+            var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == key);
+
+            if (permission is null)
+            {
+                throw new Exception($"Permission {key} not found");
+            }
+
+            var identifierPermission = 
+                context.Get<IdentifierPermission>()
+                .FirstOrDefault(a => a.PermissionId == permission.Id && a.IdentifierKey == identifierKey);
+            await context.DeleteAsync<IdentifierPermission>(identifierPermission);
+        }
     }
 }
