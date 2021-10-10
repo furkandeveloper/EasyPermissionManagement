@@ -3,15 +3,17 @@ using System;
 using EasyPermissionManagement.PostgreSql.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace EasyPermissionManagement.PostgreSql.Migrations
 {
     [DbContext(typeof(EasyPermissionPostgreSqlDbContext))]
-    partial class EasyPermissionPostgreSqlDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211010122837_AddIdentifierPermissionTable")]
+    partial class AddIdentifierPermissionTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
