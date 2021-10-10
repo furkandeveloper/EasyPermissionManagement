@@ -16,9 +16,9 @@ namespace EasyPermissionManagement.Core.Concrete
         {
             this.context = context;
         }
-        public virtual async Task ApplyPermissionAsync(string key, string identifierKey)
+        public virtual async Task ApplyPermissionAsync(string key, string provider, string identifierKey)
         {
-            var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == key);
+            var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == key && a.Provider == provider);
 
             if (permission is null)
             {
@@ -32,9 +32,9 @@ namespace EasyPermissionManagement.Core.Concrete
             });
         }
 
-        public async Task RemovePermissionAsync(string key, string identifierKey)
+        public virtual async Task RemovePermissionAsync(string key, string provider, string identifierKey)
         {
-            var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == key);
+            var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == key && a.Provider == provider);
 
             if (permission is null)
             {
