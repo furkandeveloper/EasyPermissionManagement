@@ -12,6 +12,12 @@ namespace EasyPermissionManagement.Core.Attributes
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public class RegisterIdentifierAttribute : Attribute
     {
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="provider">
+        /// Check Provider For Example; Organization, User etc.
+        /// </param>
         public RegisterIdentifierAttribute(string provider)
         {
             Provider = provider;
