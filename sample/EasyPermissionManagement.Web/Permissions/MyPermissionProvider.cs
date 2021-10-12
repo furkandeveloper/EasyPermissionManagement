@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace EasyPermissionManagement.Web.Permissions
 {
+    /// <summary>
+    /// My Permission Provider
+    /// </summary>
     public class MyPermissionProvider : PermissionProvider
     {
+        /// <summary>
+        /// Set Default Permissions
+        /// </summary>
+        /// <param name="context">
+        /// Permission Defination Context
+        /// </param>
         public override void Set(IPermissionDefinationContext context)
         {
             // LEAD for User
