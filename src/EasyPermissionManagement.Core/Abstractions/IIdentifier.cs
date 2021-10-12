@@ -20,6 +20,6 @@ namespace EasyPermissionManagement.Core.Abstractions
         /// <returns>
         /// Task of string
         /// </returns>
-        Task<string> GetAsync(string provider);
+        Task<string> GetAsync();
     }
 }
