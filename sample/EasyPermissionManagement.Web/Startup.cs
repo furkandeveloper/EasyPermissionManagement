@@ -2,6 +2,7 @@ using EasyPermissionManagement.Core.Extensions;
 using EasyPermissionManagement.PostgreSql.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,20 +13,40 @@ using System.Reflection;
 
 namespace EasyPermissionManagement.Web
 {
+    /// <summary>
+    /// Startup
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Configuration Object
+        /// </summary>
         public IConfiguration Configuration { get; }
 
+
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="configuration">
+        /// Configuration Object
+        /// </param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container.
+        /// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940</summary>
+        /// <param name="services">
+        /// Specifies the contract for a collection of service descriptors.
+        /// </param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
             services.AddEasyPermission();
+
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.UseEasyPermissionNpgsql(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSwaggerGen(options =>
@@ -52,7 +73,15 @@ namespace EasyPermissionManagement.Web
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app">
+        /// Defines a class that provides the mechanisms to configure an application's request pipeline.
+        /// </param>
+        /// <param name="env">
+        /// Provides information about the web hosting environment an application is running in.
+        /// </param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
