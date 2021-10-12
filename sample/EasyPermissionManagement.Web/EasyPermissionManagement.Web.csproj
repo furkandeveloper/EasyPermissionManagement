@@ -4,6 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+	</PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\src\EasyPermissionManagement.AspNetCore\EasyPermissionManagement.AspNetCore.csproj" />
     <ProjectReference Include="..\..\src\EasyPermissionManagement.Core\EasyPermissionManagement.Core.csproj" />
