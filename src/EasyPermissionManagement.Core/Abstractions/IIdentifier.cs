@@ -14,9 +14,6 @@ namespace EasyPermissionManagement.Core.Abstractions
         /// <summary>
         /// Get Identifier key
         /// </summary>
-        /// <param name="provider">
-        /// Identifier provider. For Example: User, organization, team, company, supplier etc.
-        /// </param>
         /// <returns>
         /// Task of string
         /// </returns>
