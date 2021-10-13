@@ -12,8 +12,20 @@ using Microsoft.AspNetCore.Http;
 
 namespace EasyPermissionManagement.AspNetCore.Attributes
 {
+    /// <summary>
+    /// Check Attribute
+    /// </summary>
     public class EasyCheckAttribute : ActionFilterAttribute
     {
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="key">
+        /// Key of Permission
+        /// </param>
+        /// <param name="provider">
+        /// Identifier Method
+        /// </param>
         public EasyCheckAttribute(string key, string provider)
         {
             if (string.IsNullOrWhiteSpace(key))
@@ -30,14 +42,24 @@ namespace EasyPermissionManagement.AspNetCore.Attributes
             Provider = provider;
         }
 
+        /// <summary>
+        /// Key of Permission
+        /// </summary>
         public string Key { get; }
+
+        /// <summary>
+        /// Identifier Method
+        /// </summary>
         public string Provider { get; }
 
+        /// <summary>
+        /// On Action Execution Method for Easy Check
+        /// </summary>
         public override async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
             var serviceProvider = context.HttpContext.RequestServices.GetService<IServiceProvider>();
             var provider = serviceProvider.FindIdentifier(this.Provider);
-            string identifierKey = await provider.GetAsync(this.Provider);
+            string identifierKey = await provider.GetAsync();
             var permissionChecker = context.HttpContext.RequestServices.GetService<IPermissionChecker>();
             bool isCheck = await permissionChecker.CheckAsync(permissionKey: this.Key, provider: this.Provider, identifierKey: identifierKey);
             if (!isCheck)
