@@ -23,6 +23,9 @@ namespace EasyPermissionManagement.Core.Attributes
             Provider = provider;
         }
 
+        /// <summary>
+        /// Identifier Method
+        /// </summary>
         public string Provider { get; }
     }
 }
