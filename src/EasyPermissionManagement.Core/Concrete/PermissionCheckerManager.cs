@@ -8,14 +8,39 @@ using System.Threading.Tasks;
 
 namespace EasyPermissionManagement.Core.Concrete
 {
+    /// <summary>
+    /// Check Permission Manager
+    /// </summary>
     public class PermissionCheckerManager : IPermissionChecker
     {
         private readonly IEasyPermissionContext context;
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="context">
+        /// Abstraction of Easy Permission Db Context
+        /// </param>
         public PermissionCheckerManager(IEasyPermissionContext context)
         {
             this.context = context;
         }
+
+        /// <summary>
+        /// Check Permission
+        /// </summary>
+        /// <param name="permissionKey">
+        /// Key of Permission
+        /// </param>
+        /// <param name="provider">
+        /// Identifier Method
+        /// </param>
+        /// <param name="identifierKey">
+        /// Identifier Key
+        /// </param>
+        /// <returns>
+        /// Task of bool
+        /// </returns>
         public virtual Task<bool> CheckAsync(string permissionKey, string provider, string identifierKey)
         {
             var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == permissionKey && a.Provider == provider);
