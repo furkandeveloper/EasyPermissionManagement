@@ -6,18 +6,34 @@ using System.Threading.Tasks;
 
 namespace EasyPermissionManagement.Core.Statics
 {
+    /// <summary>
+    /// Permission
+    /// </summary>
     public class PermissionValue
     {
-        public PermissionValue(string key, string provider, bool isDefault)
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="key">
+        /// Key of Permission
+        /// </param>
+        /// <param name="provider">
+        /// Identifier Method
+        /// </param>
+        public PermissionValue(string key, string provider)
         {
             Key = key;
             Provider = provider;
-            IsDefault = isDefault;
         }
 
+        /// <summary>
+        /// Key of Permission
+        /// </summary>
         public string Key { get; }
 
+        /// <summary>
+        /// Identifier Method
+        /// </summary>
         public string Provider { get; }
-        public bool IsDefault { get; }
     }
 }
