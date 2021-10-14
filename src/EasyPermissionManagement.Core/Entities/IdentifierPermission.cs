@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace EasyPermissionManagement.Core.Entities
 {
+    /// <summary>
+    /// Identifier Permission Entitiy
+    /// </summary>
     public class IdentifierPermission : BaseEntity
     {
+        /// <summary>
+        /// FK of Permission
+        /// </summary>
         public Guid PermissionId { get; set; }
 
+        /// <summary>
+        /// Identifier Key
+        /// </summary>
         public string IdentifierKey { get; set; }
 
         /// <summary>
