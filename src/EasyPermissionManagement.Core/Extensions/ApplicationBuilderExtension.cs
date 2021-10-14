@@ -8,8 +8,20 @@ using System.Linq;
 
 namespace EasyPermissionManagement.Core.Extensions
 {
+    /// <summary>
+    /// Application Builder Extension
+    /// </summary>
     public static class ApplicationBuilderExtension
     {
+        /// <summary>
+        /// Apply Easy Permission
+        /// </summary>
+        /// <remarks>
+        /// This method when runs application start
+        /// </remarks>
+        /// <param name="app">
+        /// Defines a class that provides the mechanisms to configure an application's request pipeline.
+        /// </param>
         public static void ApplyEasyPermission(this IApplicationBuilder app)
         {
             var type = typeof(PermissionProvider);
