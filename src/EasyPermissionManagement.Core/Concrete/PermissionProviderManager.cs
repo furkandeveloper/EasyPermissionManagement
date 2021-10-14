@@ -8,14 +8,36 @@ using System.Threading.Tasks;
 
 namespace EasyPermissionManagement.Core.Concrete
 {
+    /// <summary>
+    /// Assign or remove permissions to your data.
+    /// </summary>
     public class PermissionProviderManager : IPermissionProvider
     {
         private readonly IEasyPermissionContext context;
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="context">
+        /// Abstraction of Easy Permission Db Context
+        /// </param>
         public PermissionProviderManager(IEasyPermissionContext context)
         {
             this.context = context;
         }
+
+        /// <summary>
+        /// Apply Permission
+        /// </summary>
+        /// <param name="key">
+        /// Key of Permission
+        /// </param>
+        /// <param name="provider">
+        /// Identifier Method
+        /// </param>
+        /// <param name="identifierKey">
+        /// The value to be identified.
+        /// </param>
         public virtual async Task ApplyPermissionAsync(string key, string provider, string identifierKey)
         {
             var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == key && a.Provider == provider);
@@ -32,6 +54,18 @@ namespace EasyPermissionManagement.Core.Concrete
             });
         }
 
+        /// <summary>
+        /// Remove Permission
+        /// </summary>
+        /// <param name="key">
+        /// Key of Permission
+        /// </param>
+        /// <param name="provider">
+        /// Identifier Method
+        /// </param>
+        /// <param name="identifierKey">
+        /// The value to be identified.
+        /// </param>
         public virtual async Task RemovePermissionAsync(string key, string provider, string identifierKey)
         {
             var permission = context.Get<Permission>().FirstOrDefault(a => a.Key == key && a.Provider == provider);
