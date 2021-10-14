@@ -8,8 +8,14 @@ using System.Threading.Tasks;
 
 namespace EasyPermissionManagement.PostgreSql.Context
 {
+    /// <summary>
+    /// Design Time Db Context For EasyPermissionPostgreSqlDbContext
+    /// </summary>
     public class DesignTimeDbContext : IDesignTimeDbContextFactory<EasyPermissionPostgreSqlDbContext>
     {
+        /// <summary>
+        /// Create DbContext
+        /// </summary>
         public EasyPermissionPostgreSqlDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<EasyPermissionPostgreSqlDbContext>();
