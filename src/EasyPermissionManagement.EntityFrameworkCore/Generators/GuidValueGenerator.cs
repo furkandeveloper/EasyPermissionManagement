@@ -13,8 +13,20 @@ namespace EasyPermissionManagement.EntityFrameworkCore.Generators
     /// </summary>
     public class GuidValueGenerator : ValueGenerator
     {
+        /// <summary>
+        /// GeneratesTemporaryValues
+        /// </summary>
         public override bool GeneratesTemporaryValues => false;
 
+        /// <summary>
+        /// Generate value
+        /// </summary>
+        /// <param name="entry">
+        /// Entry
+        /// </param>
+        /// <returns>
+        /// Object
+        /// </returns>
         protected override object NextValue(EntityEntry entry)
         {
             return Guid.NewGuid();
