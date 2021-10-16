@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EasyPermissionManagement.AspNetCore\EasyPermissionManagement.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\src\EasyPermissionManagement.Core\EasyPermissionManagement.Core.csproj" />
+    <ProjectReference Include="..\..\src\EasyPermissionManagement.PostgreSql\EasyPermissionManagement.PostgreSql.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+	</ItemGroup>
+
+</Project>

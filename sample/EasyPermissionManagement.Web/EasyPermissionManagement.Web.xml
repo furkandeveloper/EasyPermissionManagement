@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EasyPermissionManagement.Web</name>
+    </assembly>
+    <members>
+        <member name="M:EasyPermissionManagement.Web.Controllers.IdentifierPermissionController.ApplyPermissionAsync(EasyPermissionManagement.Web.Dtos.DefinePermissionRequestDto)">
+            <summary>
+            Apply Permission
+            </summary>
+            <param name="dto">
+            Define Permission Request Data Transfer Object
+            </param>
+            <returns>
+            Status Code : 200
+            </returns>
+        </member>
+        <member name="M:EasyPermissionManagement.Web.Controllers.IdentifierPermissionController.GetAllPermisionsAsync">
+            <summary>
+            Get All Permissions
+            </summary>
+            <returns>
+            List of Permission
+            </returns>
+        </member>
+        <member name="M:EasyPermissionManagement.Web.Controllers.IdentifierPermissionController.AuthorizeCheck(System.String)">
+            <summary>
+            Authorize Check For User Identifier Endpoint
+            </summary>
+            <remarks>
+            The authorization status of the id information coming over the route will be determined by the User Identifier method.
+            This endpoint will check lead.read permission with User Identifier method.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:EasyPermissionManagement.Web.Controllers.IdentifierPermissionController.FailAuthorizeCheck(System.String)">
+            <summary>
+            Fail Authorize Check For User Identifier Endpoint
+            The authorization status of the id information coming over the route will be determined by the User Identifier method.
+            This endpoint will check lead.read permission with User Identifier method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EasyPermissionManagement.Web.Permissions.MyPermissionProvider">
+            <summary>
+            My Permission Provider
+            </summary>
+        </member>
+        <member name="M:EasyPermissionManagement.Web.Permissions.MyPermissionProvider.Set(EasyPermissionManagement.Core.Abstractions.IPermissionDefinationContext)">
+            <summary>
+            Set Default Permissions
+            </summary>
+            <param name="context">
+            Permission Defination Context
+            </param>
+        </member>
+    </members>
+</doc>
