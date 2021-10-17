@@ -10,6 +10,21 @@
 
 ***
 
+| Source     | Badges                |
+| :------- | :------------------------- |
+| `Code Quality` | [![codebeat badge](https://codebeat.co/badges/1a7e6159-96c4-4972-8eda-7a6e88c58458)](https://codebeat.co/projects/github-com-furkandeveloper-easypermissionmanagement-master) [![Maintainability](https://api.codeclimate.com/v1/badges/88f30c925600cd05fa45/maintainability)](https://codeclimate.com/github/furkandeveloper/EasyPermissionManagement/maintainability) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cd633565e10e43c8b8d5fb33ef1ac7ae)](https://www.codacy.com/gh/furkandeveloper/EasyPermissionManagement/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=furkandeveloper/EasyPermissionManagement&amp;utm_campaign=Badge_Grade) [![CodeFactor](https://www.codefactor.io/repository/github/furkandeveloper/easypermissionmanagement/badge/master)](https://www.codefactor.io/repository/github/furkandeveloper/easypermissionmanagement/overview/master) |
+| `Stats For PostgreSQL` | ![Nuget](https://img.shields.io/nuget/dt/EasyPermissionManagement.PostgreSql?label=PostgreSQL%20Downloads) ![Nuget](https://img.shields.io/nuget/v/EasyPermissionManagement.PostgreSql?label=PostgreSQL) |
+| `Stats For Core` | ![Nuget](https://img.shields.io/nuget/dt/EasyPermissionManagement.Core?label=Core%20Downloads) ![Nuget](https://img.shields.io/nuget/v/EasyPermissionManagement.Core?label=Core) |
+| `Stats For AspNetCore` | ![Nuget](https://img.shields.io/nuget/dt/EasyPermissionManagement.AspNetCore?label=AspNetCore%20Downloads) ![Nuget](https://img.shields.io/nuget/v/EasyPermissionManagement.AspNetCore?label=AspNetCore) |
+| `Stats For EntityFrameworkCore` | ![Nuget](https://img.shields.io/nuget/dt/EasyPermissionManagement.EntityFrameworkCore?label=EntityFrameworkCore%20Downloads) ![Nuget](https://img.shields.io/nuget/v/EasyPermissionManagement.EntityFrameworkCore?label=EntityFrameworkCore) |
+| `License` | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  |
+| `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/furkandeveloper/EasyPermissionManagement) ![GitHub contributors](https://img.shields.io/github/contributors/furkandeveloper/EasyPermissionManagement) ![GitHub last commit](https://img.shields.io/github/last-commit/furkandeveloper/EasyPermissionManagement) ![GitHub search hit counter](https://img.shields.io/github/search/furkandeveloper/EasyPermissionManagement/EasyPermissionManagement) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/furkandeveloper/EasyPermissionManagement) ![GitHub repo size](https://img.shields.io/github/repo-size/furkandeveloper/EasyPermissionManagement)|
+| `Languages` | ![GitHub top language](https://img.shields.io/github/languages/top/furkandeveloper/EasyPermissionManagement) |
+| `Issue Tracking` | ![GitHub issues](https://img.shields.io/github/issues/furkandeveloper/EasyPermissionManagement) ![GitHub closed issues](https://img.shields.io/github/issues-closed/furkandeveloper/EasyPermissionManagement) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/furkandeveloper/EasyPermissionManagement) ![GitHub pull requests](https://img.shields.io/github/issues-pr/furkandeveloper/EasyPermissionManagement) |
+| `Source Code` | [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/furkandeveloper/EasyPermissionManagement) |
+
+***
+
 ## Give a Star 🌟
 If you liked the project or if **EasyPermissionManagement** helped you, please give a star.
 
