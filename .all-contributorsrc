@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "furkandeveloper",
+      "name": "Furkan Güngör",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47147484?v=4",
+      "profile": "https://furkangungor.krawl.me/",
+      "contributions": [
+        "mentoring"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "EasyPermissionManagement",
+  "projectOwner": "furkandeveloper",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
