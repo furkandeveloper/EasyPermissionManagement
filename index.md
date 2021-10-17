@@ -1,37 +1,52 @@
-## Welcome to GitHub Pages
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47147484/136712257-bf88799b-f3e8-4102-bf77-91bdf6a9f5b6.png" style="max-width:100%;" height="140" />
+</p>
 
-You can use the [editor on GitHub](https://github.com/furkandeveloper/EasyPermissionManagement/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<p align="center">
+  <a href="https://gitmoji.carloscuesta.me">
+    <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+  </a> 
+</p>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+***
 
-### Markdown
+## Give a Star 🌟
+If you liked the project or if **EasyPermissionManagement** helped you, please give a star.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+***
 
-```markdown
-Syntax highlighted code block
+### Purpose
+**Easy Permission Management** provides easily permission management on your aspnetcore project.
 
-# Header 1
-## Header 2
-### Header 3
+***
 
-- Bulleted
-- List
+### Supported Databases
+- PostgreSQL
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### Planned Databases
+- [ ] Sql Server
+- [ ] MariaDb
+- [ ] MySql
+- [ ] Mongo
+- [ ] SqLite
+- [ ] Firebird
+- [ ] Oracle
 
-[Link](url) and ![Image](src)
-```
+***
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## Permission-based Authorization
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/furkandeveloper/EasyPermissionManagement/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Typically, applications require more than just authenticated users. We would like to have users with different sets of permissions. The easiest way to achieve this is with the role-based authorization where we allow users to perform certain actions depending on their membership in a role.
 
-### Support or Contact
+For small applications, it might be perfectly fine to use role-based authorization, but this has some drawbacks. For instance, it would be difficult to add or remove roles, because we would have to check every `AuthorizeAttribute` with role specified in our code whenever we changed roles.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+More flexible authorization could be implemented using claims. Instead of checking role membership, we check if a user has a permission to perform a certain action. Permission in this case is represented as a claim.
+
+***
+
+### Documentation
+Visit [Wiki](https://github.com/furkandeveloper/EasyPermissionManagement/wiki) page for documentation. Lets learn. 👨‍🎓🧐
+
+
