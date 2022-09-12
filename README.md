@@ -89,3 +89,8 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 <hr/>
 
 ![Alt](https://repobeats.axiom.co/api/embed/e431142fb56e31582b660eab3ab064598ff73ff6.svg "Repobeats analytics image")
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=furkandeveloper/EasyPermissionManagement&type=Date)](https://star-history.com/#furkandeveloper/EasyPermissionManagement&Date)
+
