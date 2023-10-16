@@ -21,7 +21,6 @@
 | `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/furkandeveloper/EasyPermissionManagement) ![GitHub contributors](https://img.shields.io/github/contributors/furkandeveloper/EasyPermissionManagement) ![GitHub last commit](https://img.shields.io/github/last-commit/furkandeveloper/EasyPermissionManagement) ![GitHub search hit counter](https://img.shields.io/github/search/furkandeveloper/EasyPermissionManagement/EasyPermissionManagement) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/furkandeveloper/EasyPermissionManagement) ![GitHub repo size](https://img.shields.io/github/repo-size/furkandeveloper/EasyPermissionManagement)|
 | `Languages` | ![GitHub top language](https://img.shields.io/github/languages/top/furkandeveloper/EasyPermissionManagement) |
 | `Issue Tracking` | ![GitHub issues](https://img.shields.io/github/issues/furkandeveloper/EasyPermissionManagement) ![GitHub closed issues](https://img.shields.io/github/issues-closed/furkandeveloper/EasyPermissionManagement) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/furkandeveloper/EasyPermissionManagement) ![GitHub pull requests](https://img.shields.io/github/issues-pr/furkandeveloper/EasyPermissionManagement) |
-| `Source Code` | [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/furkandeveloper/EasyPermissionManagement) |
 
 ***
 
